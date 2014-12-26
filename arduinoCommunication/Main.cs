@@ -15,6 +15,11 @@ namespace arduinoCommunication
     {
         SerialPort port;
 
+        /// <summary>
+        /// Safely run code inside try catch.
+        /// </summary>
+        /// <param name="action">Code</param>
+        /// <param name="message">Display error message</param>
         public void SafeAction(Action action, bool message=true)
         {
             try
@@ -30,6 +35,11 @@ namespace arduinoCommunication
             }
         }
 
+        /// <summary>
+        /// Start serial communication with Arduino board.
+        /// </summary>
+        /// <param name="listeningPort">Listening Port</param>
+        /// <param name="baudRate">Baud Rate</param>
         public void InitializeArduino(String listeningPort, int baudRate) 
         {
             SafeAction(() =>
@@ -39,11 +49,13 @@ namespace arduinoCommunication
                 port.StopBits = StopBits.One;
                 port.DataBits = 8;
                 port.Handshake = Handshake.None;
+                //
                 port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
                 port.Open();
             });
         }
+
 
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
