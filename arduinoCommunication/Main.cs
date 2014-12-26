@@ -14,9 +14,25 @@ namespace arduinoCommunication
     public partial class Main : Form
     {
         SerialPort port;
-        public void InitializeArduino(String listeningPort, int baudRate) 
+
+        public void SafeAction(Action action, bool message=true)
         {
             try
+            {
+                action();
+            }
+            catch (Exception ex)
+            {
+                if (message)
+                {
+                    MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        public void InitializeArduino(String listeningPort, int baudRate) 
+        {
+            SafeAction(() =>
             {
                 port = new SerialPort(listeningPort, baudRate);
                 port.Parity = Parity.None;
@@ -26,11 +42,7 @@ namespace arduinoCommunication
                 port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
                 port.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            });
         }
 
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -69,29 +81,21 @@ namespace arduinoCommunication
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            InitializeArduino(cmbPorts.Text, Convert.ToInt32(txtBaudRate.Text));
+            SafeAction(() => InitializeArduino(cmbPorts.Text, Convert.ToInt32(txtBaudRate.Text)) );
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            try
+            SafeAction(() =>
             {
                 String s = txtSend.Text;
                 port.Write(s);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            });
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
-            {
-                port.Close();
-            }
-            catch (Exception) { }
+            SafeAction(() => port.Close(), false);       
         }
 
         private void txtLog_TextChanged(object sender, EventArgs e)
