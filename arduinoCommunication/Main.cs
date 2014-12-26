@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +14,11 @@ namespace arduinoCommunication
     public partial class Main : Form
     {
         SerialPort port;
-        public void InitializeArduino(String listeningPort, int boundrate) 
+        public void InitializeArduino(String listeningPort, int baudRate) 
         {
             try
             {
-                port = new SerialPort(listeningPort, boundrate);
+                port = new SerialPort(listeningPort, baudRate);
                 port.BaudRate = 9600;
                 port.Parity = Parity.None;
                 port.StopBits = StopBits.One;
@@ -60,6 +60,7 @@ namespace arduinoCommunication
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            InitializeArduino("COM3", 9600);
             string[] ports = SerialPort.GetPortNames();
 
             foreach (string port in ports)
@@ -70,7 +71,7 @@ namespace arduinoCommunication
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            InitializeArduino(cmbPorts.Text, Convert.ToInt32(txtBoundRate.Text));
+            InitializeArduino(cmbPorts.Text, Convert.ToInt32(txtBaudRate.Text));
         }
 
         private void btnSend_Click(object sender, EventArgs e)
