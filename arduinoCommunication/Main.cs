@@ -74,8 +74,15 @@ namespace arduinoCommunication
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            String s = txtSend.Text;
-            port.Write(s);
+            try
+            {
+                String s = txtSend.Text;
+                port.Write(s);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
