@@ -1,0 +1,7 @@
+C:\Users\User\AppData\Local\Temporary Projects\arduinoC\obj\x86\Debug\arduinoC.csproj.GenerateResource.Cache
+C:\Users\User\AppData\Local\Temporary Projects\arduinoC\bin\Debug\arduinoCommunication.exe
+C:\Users\User\AppData\Local\Temporary Projects\arduinoC\bin\Debug\arduinoCommunication.pdb
+C:\Users\User\AppData\Local\Temporary Projects\arduinoC\obj\x86\Debug\arduinoCommunication.Properties.Resources.resources
+C:\Users\User\AppData\Local\Temporary Projects\arduinoC\obj\x86\Debug\arduinoCommunication.exe
+C:\Users\User\AppData\Local\Temporary Projects\arduinoC\obj\x86\Debug\arduinoCommunication.pdb
+C:\Users\User\AppData\Local\Temporary Projects\arduinoC\obj\x86\Debug\arduinoCommunication.Main.resources
