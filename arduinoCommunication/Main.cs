@@ -19,7 +19,6 @@ namespace arduinoCommunication
             try
             {
                 port = new SerialPort(listeningPort, baudRate);
-                port.BaudRate = 9600;
                 port.Parity = Parity.None;
                 port.StopBits = StopBits.One;
                 port.DataBits = 8;
