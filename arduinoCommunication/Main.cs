@@ -60,7 +60,6 @@ namespace arduinoCommunication
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            InitializeArduino("COM3", 9600);
             string[] ports = SerialPort.GetPortNames();
 
             foreach (string port in ports)
