@@ -1,4 +1,4 @@
-﻿namespace arduinoCommunication
+namespace arduinoCommunication
 {
     partial class Main
     {
@@ -35,7 +35,7 @@
             this.cmbPorts = new System.Windows.Forms.ComboBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBoundRate = new System.Windows.Forms.TextBox();
+            this.txtBaudRate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSend = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
@@ -83,7 +83,7 @@
             this.groupBox2.Controls.Add(this.cmbPorts);
             this.groupBox2.Controls.Add(this.btnConnect);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtBoundRate);
+            this.groupBox2.Controls.Add(this.txtBaudRate);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
@@ -115,17 +115,17 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(166, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Bound rate";
+            this.label2.Text = "Baud Rate";
             // 
-            // txtBoundRate
+            // txtBaudRate
             // 
-            this.txtBoundRate.Location = new System.Drawing.Point(231, 19);
-            this.txtBoundRate.Name = "txtBoundRate";
-            this.txtBoundRate.Size = new System.Drawing.Size(133, 20);
-            this.txtBoundRate.TabIndex = 2;
-            this.txtBoundRate.Text = "9600";
+            this.txtBaudRate.Location = new System.Drawing.Point(230, 19);
+            this.txtBaudRate.Name = "txtBaudRate";
+            this.txtBaudRate.Size = new System.Drawing.Size(134, 20);
+            this.txtBaudRate.TabIndex = 2;
+            this.txtBaudRate.Text = "9600";
             // 
             // label1
             // 
@@ -193,7 +193,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBoundRate;
+        private System.Windows.Forms.TextBox txtBaudRate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbPorts;
         private System.Windows.Forms.TextBox txtLog;
