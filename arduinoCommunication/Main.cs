@@ -13,7 +13,6 @@ namespace arduinoCommunication
 {
     public partial class Main : Form
     {
-
         SerialPort port;
         public void InitializeArduino(String listeningPort, int boundrate) 
         {
@@ -28,13 +27,11 @@ namespace arduinoCommunication
                 port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
                 port.Open();
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -54,7 +51,6 @@ namespace arduinoCommunication
         public Main()
         {
             InitializeComponent();
-            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -94,6 +90,5 @@ namespace arduinoCommunication
             txtLog.SelectionStart = txtLog.Text.Length;
             txtLog.ScrollToCaret();
         }
-    
     }
 }
