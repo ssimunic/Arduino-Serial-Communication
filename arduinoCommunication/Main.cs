@@ -87,7 +87,11 @@ namespace arduinoCommunication
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            port.Close();
+            try
+            {
+                port.Close();
+            }
+            catch (Exception) { }
         }
 
         private void txtLog_TextChanged(object sender, EventArgs e)
