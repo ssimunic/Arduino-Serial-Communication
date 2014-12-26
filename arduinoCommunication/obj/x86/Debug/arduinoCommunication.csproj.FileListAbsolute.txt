@@ -1,9 +1,0 @@
-C:\Users\User\AppData\Local\Temporary Projects\arduinoC\obj\x86\Debug\arduinoCommunication.exe
-C:\Users\User\AppData\Local\Temporary Projects\arduinoC\obj\x86\Debug\arduinoCommunication.pdb
-C:\Users\User\documents\visual studio 2010\Projects\arduinoCommunication\arduinoCommunication\obj\x86\Debug\arduinoCommunication.exe
-C:\Users\User\documents\visual studio 2010\Projects\arduinoCommunication\arduinoCommunication\obj\x86\Debug\arduinoCommunication.pdb
-C:\Users\User\documents\visual studio 2010\Projects\arduinoCommunication\arduinoCommunication\bin\Debug\arduinoCommunication.exe
-C:\Users\User\documents\visual studio 2010\Projects\arduinoCommunication\arduinoCommunication\bin\Debug\arduinoCommunication.pdb
-C:\Users\User\documents\visual studio 2010\Projects\arduinoCommunication\arduinoCommunication\obj\x86\Debug\arduinoCommunication.Main.resources
-C:\Users\User\documents\visual studio 2010\Projects\arduinoCommunication\arduinoCommunication\obj\x86\Debug\arduinoCommunication.Properties.Resources.resources
-C:\Users\User\documents\visual studio 2010\Projects\arduinoCommunication\arduinoCommunication\obj\x86\Debug\arduinoCommunication.csproj.GenerateResource.Cache
