@@ -49,7 +49,6 @@ namespace arduinoCommunication
                 port.StopBits = StopBits.One;
                 port.DataBits = 8;
                 port.Handshake = Handshake.None;
-                //
                 port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
                 port.Open();
