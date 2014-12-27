@@ -52,6 +52,8 @@ namespace arduinoCommunication
                 port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
                 port.Open();
+                if (port.IsOpen)
+                btnConnect.Visible = false;
             });
         }
 
@@ -95,6 +97,17 @@ namespace arduinoCommunication
             SafeAction(() => InitializeArduino(cmbPorts.Text, Convert.ToInt32(txtBaudRate.Text)) );
         }
 
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+            if (port != null && port.IsOpen)
+                SafeAction(() =>
+                {
+
+                    port.Close();
+                    btnConnect.Visible = true;
+                });
+        }
+
         private void btnSend_Click(object sender, EventArgs e)
         {
             SafeAction(() =>
@@ -114,5 +127,6 @@ namespace arduinoCommunication
             txtLog.SelectionStart = txtLog.Text.Length;
             txtLog.ScrollToCaret();
         }
+
     }
 }

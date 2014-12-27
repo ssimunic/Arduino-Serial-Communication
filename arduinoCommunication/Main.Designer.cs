@@ -37,6 +37,7 @@ namespace arduinoCommunication
             this.label2 = new System.Windows.Forms.Label();
             this.txtBaudRate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDisconnect = new System.Windows.Forms.Button();
             this.txtSend = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -85,6 +86,7 @@ namespace arduinoCommunication
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtBaudRate);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btnDisconnect);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(479, 52);
@@ -135,6 +137,16 @@ namespace arduinoCommunication
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Port";
+            // 
+            // btnDisconnect
+            // 
+            this.btnDisconnect.Location = new System.Drawing.Point(370, 16);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(103, 23);
+            this.btnDisconnect.TabIndex = 6;
+            this.btnDisconnect.Text = "Disconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = true;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
             // txtSend
             // 
@@ -202,6 +214,7 @@ namespace arduinoCommunication
         private System.Windows.Forms.TextBox txtSend;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnDisconnect;
     }
 }
 
