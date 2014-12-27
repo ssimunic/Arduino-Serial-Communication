@@ -52,6 +52,8 @@ namespace arduinoCommunication
                 port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
 
                 port.Open();
+                if (port.IsOpen)
+                btnConnect.Visible = false;
             });
         }
 
@@ -113,6 +115,16 @@ namespace arduinoCommunication
         {
             txtLog.SelectionStart = txtLog.Text.Length;
             txtLog.ScrollToCaret();
+        }
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+            if (port != null && port.IsOpen)
+                SafeAction(() => {
+
+                    port.Close();
+                    btnConnect.Visible = true;
+                });
         }
     }
 }
