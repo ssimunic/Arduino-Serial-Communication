@@ -55,7 +55,9 @@ namespace arduinoCommunication
             });
         }
 
-
+        /// <summary>
+        /// Called when there is new data coming in.
+        /// </summary>
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             SerialPort sp = (SerialPort)sender;
